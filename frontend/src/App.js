@@ -22,7 +22,7 @@ function App() {
 
   return (
     <TooltipProvider delayDuration={200}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />

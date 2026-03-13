@@ -10,6 +10,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
         <title>Orbit — Relationship CRM</title>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
+        <!-- GitHub Pages SPA redirect handler -->
+        <script type="text/javascript">
+            (function(l) {
+                if (l.search[1] === '/') {
+                    var decoded = l.search.slice(1).split('&').map(function(s) {
+                        return s.replace(/~and~/g, '&')
+                    }).join('?');
+                    window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+                }
+            }(window.location))
+        </script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>
     <body>

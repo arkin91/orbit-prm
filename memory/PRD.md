@@ -43,6 +43,7 @@ Build Orbit — a personal and professional relationship CRM powered by AI. Reac
 - Profile: user info, 4-stat network snapshot, settings modals
 - Notification bell with count badge
 - CSV export functionality
+- gh-pages deployment configured (homepage, predeploy, deploy scripts, 404.html SPA redirect, BrowserRouter basename)
 - All 26 features passed testing (100% success rate)
 
 ## Prioritized Backlog
