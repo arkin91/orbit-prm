@@ -1,34 +1,92 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Orbit Design System — App Styles */
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+    transition-property: background-color, color, border-color, opacity;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Sidebar transition */
+.orbit-sidebar {
+    transition-property: width;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Callout box — left border accent */
+.callout-warm { border-left: 3px solid #0F6E56; }
+.callout-strong { border-left: 3px solid #3B6D11; }
+.callout-lukewarm { border-left: 3px solid #854F0B; }
+.callout-cold { border-left: 3px solid #A32D2D; }
+.callout-primary { border-left: 3px solid #185FA5; }
+
+/* Timeline */
+.timeline-line {
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 1px;
+    background: #E5E7EB;
 }
 
-.App-link {
-    color: #61dafb;
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 11px;
+    top: 6px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger-children > * {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 350ms; }
+
+/* Scrollbar styling */
+.orbit-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.orbit-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.orbit-scroll::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+}
+.orbit-scroll::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* FAB hover */
+.fab-button:hover {
+    transform: scale(1.05);
+}
+.fab-button:active {
+    transform: scale(0.95);
+}
+.fab-button {
+    transition-property: transform;
+    transition-duration: 150ms;
 }
