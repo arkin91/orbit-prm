@@ -44,6 +44,8 @@ Build Orbit — a personal and professional relationship CRM powered by AI. Reac
 - Notification bell with count badge
 - CSV export functionality
 - gh-pages deployment configured (homepage, predeploy, deploy scripts, 404.html SPA redirect, BrowserRouter basename)
+- Fixed ajv/ajv-keywords dependency conflict: added ajv@8.17.1 as direct dep (root-level codegen path), disabled ForkTsCheckerWebpackPlugin (unused TS plugin causing schema-utils@2 conflict)
+- Homepage updated to https://arkin91.github.io/orbit-prm
 - All 26 features passed testing (100% success rate)
 
 ## Prioritized Backlog

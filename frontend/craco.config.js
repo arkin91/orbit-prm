@@ -38,6 +38,12 @@ let webpackConfig = {
     },
     configure: (webpackConfig) => {
 
+      // Remove ForkTsCheckerWebpackPlugin — this is a JS project, not TS.
+      // The plugin's schema-utils@2 has an ajv@6/8 conflict that breaks on modern Node.
+      webpackConfig.plugins = webpackConfig.plugins.filter(
+        (plugin) => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin'
+      );
+
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {
           ...webpackConfig.watchOptions,
