@@ -22,7 +22,7 @@ function App() {
 
   return (
     <TooltipProvider delayDuration={200}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename="/orbit-prm">
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
