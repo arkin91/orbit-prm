@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/orbit-prm/static/css/main.1f13c2dd.css",
+    "main.js": "/orbit-prm/static/js/main.03df3af0.js",
+    "index.html": "/orbit-prm/index.html",
+    "main.1f13c2dd.css.map": "/orbit-prm/static/css/main.1f13c2dd.css.map",
+    "main.03df3af0.js.map": "/orbit-prm/static/js/main.03df3af0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f13c2dd.css",
+    "static/js/main.03df3af0.js"
+  ]
+}
